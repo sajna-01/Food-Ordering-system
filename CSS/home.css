@@ -1,0 +1,129 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Mobile Screen Wrapper (Android Compact Ratio) */
+.mobile-container {
+    width: 360px;
+    background-color: #f3d6eb; /* Light pink background from your mockup */
+    padding: 20px 16px;
+    min-height: 740px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    margin-bottom: 25px;
+}
+
+.search-icon {
+    color: #555;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #888;
+}
+
+/* Section Title */
+.section-title {
+    color: #e6008d; /* Bright pink/magenta color */
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Food List & Cards */
+.food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.food-card {
+    background-color: #ffffff;
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-img-container {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.food-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.food-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.food-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.food-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.time {
+    font-size: 14px;
+    font-weight: bold;
+    color: #39ff14; /* Neon green color */
+}
