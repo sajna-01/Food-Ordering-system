@@ -1,122 +1,108 @@
-/* Base Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Arial', sans-serif;
 }
-
-body {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body{
+    background-color:#f0f0f0;
 }
-
-/* Mobile Screen Wrapper */
-.menu-container {
-    width: 360px;
-    background-color: #fcdbf3; /* Light pink theme background */
-    padding: 20px 18px 10px 18px;
-    min-height: 740px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    position: relative;
-    display: flex;
-    flex-direction: column;
+/* Main Web Container */
+.menu-container{
+    width:100%;
+    max-width:1200px;
+    min-height:100vh;
+    margin:auto;
+    background-color:#fcdbf3;
+    padding:30px;
 }
-
 /* Header Section */
-.menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 5px;
+.menu-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
 }
-
-.main-title {
-    color: #e6008d; /* Vibrant pink/magenta font */
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 5px;
+.main-title{
+    color:#e6008d;
+    font-size:36px;
+    font-weight:bold;
+    line-height:1.2;
 }
-
-.top-food-img {
-    width: 140px;
-    height: auto;
+.top-food-img{
+    width:180px;
+    height:auto;
 }
-
-.serving-icon {
-    width: 75px;
-    height: auto;
-    margin-top: 10px;
+.serving-icon{
+    width:90px;
+    height:auto;
 }
-
-/* Main Bordered Menu Box */
-.menu-box {
-    border: 1.5px solid #222;
-    border-radius: 25px; /* Rounded card border */
-    padding: 18px 15px;
-    background-color: transparent;
-    z-index: 1;
+/* Menu Box */
+.menu-box{
+    border:2px solid #222;
+    border-radius:25px;
+    padding:25px;
+    background:white;
 }
-
-.category-title {
-    color: #f531b2;
-    font-size: 24px;
-    font-weight: 900;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
+/* Category Title */
+.category-title{
+    color:#f531b2;
+    font-size:30px;
+    font-weight:900;
+    margin-bottom:20px;
 }
-
-/* Menu Items Alignment */
-.menu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+/* Menu List */
+.menu-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
-
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    color: #111;
-    font-weight: 500;
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    color:#111;
+    font-weight:500;
 }
-
-/* Momo Specific Layout */
-.momo-section {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+/* Momo Section */
+.momo-section{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
 }
-
-.sub-title {
-    font-size: 16px;
-    color: #111;
-    font-weight: 500;
+.sub-title{
+    font-size:20px;
+    color:#111;
 }
-
-.sub-item {
-    padding-left: 12px; /* Slight indent for sub-items */
+.sub-item{
+    padding-left:20px;
 }
-
-/* Blue underline simulation for Chicken Kurkure */
-.special-underline {
-    border-bottom: 2px solid #00a2e8; 
-    padding-bottom: 1px;
+/* Special Item */
+.special-underline{
+    border-bottom:3px solid #00a2e8;
+    padding-bottom:2px;
 }
-
-/* Bottom Salad Image Placement */
-.bottom-image-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -15px; /* Overlap effect like mockup */
-    padding-right: 5px;
+/* Bottom Image */
+.bottom-image-container{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:20px;
 }
-
-.bottom-salad-img {
-    width: 110px;
-    height: auto;
+.bottom-salad-img{
+    width:160px;
+}
+/* Responsive */
+@media(max-width:768px){
+    .menu-container{
+        padding:20px;
+    }
+    .main-title{
+        font-size:28px;
+    }
+    .top-food-img{
+        width:120px;
+    }
+    .menu-item{
+        font-size:16px;
+    }
 }

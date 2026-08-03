@@ -3,27 +3,33 @@
     padding:0;
     box-sizing:border-box;
 }
-
 body{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     background:#F6DDF2;
     font-family:Arial, sans-serif;
 }
-
 .splash{
     text-align:center;
 }
-
 .splash img{
-    width:90px;
-    margin-bottom:12px;
+    width:120px;
+    height:auto;
+    margin-bottom:20px;
 }
-
 .splash h1{
-    font-size:40px;
+    font-size:42px;
     color:#2B1626;
     font-weight:bold;
+    letter-spacing:1px;
+}
+@media(max-width:768px){
+    .splash img{
+        width:90px;
+    }
+    .splash h1{
+        font-size:32px;
+    }
 }

@@ -15,14 +15,14 @@ body {
 
 /* Mobile Screen Wrapper (Android Compact Ratio) */
 .mobile-container {
-    width: 360px;
+    width: 100px;
     background-color: #f3d6eb; /* Light pink background from your mockup */
     padding: 20px 16px;
-    min-height: 740px;
+    min-height: 100vh;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    border-radius: 28px;
+    border-radius: 0;
     overflow: hidden;
 }
 
@@ -70,9 +70,9 @@ body {
 
 /* Food List & Cards */
 .food-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+   grid-template-columns: repeat(3,1fr);
+    gap: 20px;
 }
 
 .food-card {
@@ -82,12 +82,13 @@ body {
     align-items: center;
     justify-content: space-between;
     border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Fixed: these were 0.20% (essentially invisible) — now a real fixed-size thumbnail */
 .food-img-container {
-    width: 68px;
-    height: 68px;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
