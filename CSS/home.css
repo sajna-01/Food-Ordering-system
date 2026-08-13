@@ -15,7 +15,7 @@ body {
 
 /* Mobile Screen Wrapper (Android Compact Ratio) */
 .mobile-container {
-    width: 100px;
+    width: 100%;
     background-color: #f3d6eb; /* Light pink background from your mockup */
     padding: 20px 16px;
     min-height: 100vh;
@@ -68,10 +68,40 @@ body {
     margin-bottom: 20px;
 }
 
+
+/* Categories */
+.category-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.category-card {
+    background-color: #ffffff;
+    width: 70px;
+    padding: 10px 5px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.category-icon {
+    font-size: 25px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.category-card p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+
 /* Food List & Cards */
 .food-list {
     display: grid;
-   grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
 
