@@ -1,81 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quick Bite Special Menu</title>
-<link rel="stylesheet" href="menu.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie - Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-<div class="menu-container">
-<div class="menu-header">
-<div class="header-left">
-<h1 class="main-title">Quick Bite<br>Special Menu</h1>
-<img src="images/top-food.png" alt="Special Dish" class="top-food-img">
-</div>
-<div class="header-right">
-<img src="images/serving-icon.png" alt="Serving Icon" class="serving-icon">
-</div>
-</div>
-<div class="menu-box">
-<h2 class="category-title">FOOD</h2>
-<div class="menu-list">
-<div class="menu-item">
-<span class="item-name">Ham and Cheese Sandwich</span>
-<span class="item-price">Rs 550</span>
-</div>
-<div class="momo-section">
-<span class="sub-title">Momo:</span>
-<div class="menu-item sub-item">
-<span>Veg Momo</span>
-<span>Rs 150</span>
-</div>
-<div class="menu-item sub-item">
-<span>Chicken Momo</span>
-<span>Rs 200</span>
-</div>
-<div class="menu-item sub-item">
-<span>Buff Momo</span>
-<span>Rs 170</span>
-</div>
-</div>
-<div class="menu-item special-underline">
-<span>Chicken Kurkure</span>
-<span>Rs 280</span>
-</div>
-<div class="menu-item">
-<span>Chicken Wings</span>
-<span>Rs 350</span>
-</div>
-<div class="menu-item">
-<span>Keima Noodles</span>
-<span>Rs 190</span>
-</div>
-<div class="menu-item">
-<span>Pasta</span>
-<span>Rs 220</span>
-</div>
-<div class="menu-item">
-<span>Sekuwa</span>
-<span>Rs 750</span>
-</div>
-<div class="menu-item">
-<span>Hot Dogs</span>
-<span>Rs 500</span>
-</div>
-<div class="menu-item">
-<span>Grilled Chicken</span>
-<span>Rs 870</span>
-</div>
-<div class="menu-item">
-<span>Fried Rice</span>
-<span>Rs 250</span>
-</div>
-</div>
-</div>
-<div class="bottom-image-container">
-<img src="images/salad.png" alt="Salad" class="bottom-salad-img">
-</div>
-</div>
+
+  <div class="menu-screen">
+
+    <!-- Header -->
+    <header class="navbar">
+      <h1 class="logo">Foodie<span class="heart">♥</span></h1>
+
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#" class="active">Menu</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <img src="images/search.png" alt="Search" class="search-icon">
+          <input type="text" placeholder="search for food">
+        </div>
+        <img src="images/cart.png" alt="Cart" class="cart-icon">
+      </div>
+    </header>
+
+    <!-- Menu heading -->
+    <h2 class="menu-title">Our Menu</h2>
+
+    <!-- Menu columns -->
+    <div class="menu-columns">
+
+      <!-- Foods -->
+      <div class="menu-column">
+        <h3 class="column-title">Foods</h3>
+
+        <div class="menu-item">
+          <img src="images/cburger.png" alt="Burger" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Burger</p>
+            <span class="item-price">Rs.300</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/smomo.png" alt="Momo" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Momo</p>
+            <span class="item-price">Rs.180</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/chowmein.png" alt="Chowmein" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Chowmein</p>
+            <span class="item-price">Rs.150</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/sandwich.png" alt="Sandwich" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Sandwich</p>
+            <span class="item-price">Rs.220</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/friedrice.png" alt="Fried Rice" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Fried Rice</p>
+            <span class="item-price">Rs.200</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/smallpizza.png" alt="Pizza" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Pizza</p>
+            <span class="item-price">Rs.450</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu-column">
+        <h3 class="column-title">Desserts</h3>
+
+        <p class="sub-title">Ice-Cream</p>
+
+        <div class="menu-item">
+          <img src="images/butterscotch.png" alt="Butterscotch" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Butterscotch</p>
+            <span class="item-price">Rs.150</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/vanilla.png" alt="Vanilla" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Vanilla</p>
+            <span class="item-price">Rs.120</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/blueberry.png" alt="Blueberry" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Blueberry</p>
+            <span class="item-price">Rs.160</span>
+          </div>
+        </div>
+
+        <p class="sub-title">Cake</p>
+
+        <div class="menu-item">
+          <img src="images/cheesecake.png" alt="Chocolate Cake" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Chocolate Cake</p>
+            <span class="item-price">Rs.400</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/redvelvet.png" alt="Red Velvet" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Red Velvet</p>
+            <span class="item-price">Rs.450</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/pineapple.png" alt="Pineapple Cake" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Pineapple Cake</p>
+            <span class="item-price">Rs.380</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="menu-column">
+        <h3 class="column-title">Drinks</h3>
+
+        <div class="menu-item">
+          <img src="images/virginmojito.png" alt="Virgin Mojito" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Virgin Mojito</p>
+            <span class="item-price">Rs.150</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/oreoshake.png" alt="Oreo Shake" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Oreo Shake</p>
+            <span class="item-price">Rs.180</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/coldcoffee.png" alt="Cold Coffee" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Cold Coffee</p>
+            <span class="item-price">Rs.160</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/icedlatte.png" alt="Iced Latte" class="item-emoji">
+          <div class="item-info">
+            <p class="item-name">Iced Latte</p>
+            <span class="item-price">Rs.170</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
 </html>

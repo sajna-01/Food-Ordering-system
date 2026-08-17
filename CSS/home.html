@@ -1,158 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Ordering - Home</title>
-
-    <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
 </head>
-
 <body>
 
-<div class="mobile-container">
+  <div class="home-screen">
 
-    <div class="header">
-        <h1>Hey, what's cooking?</h1>
-    </div>
+    <!-- Header -->
+    <header class="navbar">
+      <h1 class="logo">Foodie<span class="heart">♥</span></h1>
 
+      <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#">Menu</a>
+      </nav>
 
-    <div class="search-container">
-        <span class="search-icon">🔍</span>
-        <input class="search-input" 
-        type="text" 
-        placeholder="Search for food or restaurant">
-    </div>
-
-
-    <!-- Categories -->
-
-    <h2 class="section-title">
-        Categories
-    </h2>
-
-    <div class="category-list">
-
-        <div class="category-card">
-            <span class="category-icon">☕</span>
-            <p>Drinks</p>
+      <div class="nav-actions">
+        <div class="search-box">
+          <img src="images/icon.png" alt="Search" class="search-icon">
+          <input type="text" placeholder="search">
         </div>
+        <img src="images/basket.png" alt="Cart" class="cart-icon">
+      </div>
+    </header>
 
-        <div class="category-card">
-            <span class="category-icon">🍰</span>
-            <p>Dessert</p>
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Delicious Food</h2>
+        <h2>Delivered To You</h2>
+        <p>Fresh . Tasty . Fast</p>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/bigburger.png" alt="Burger" class="hero-emoji">
+        <img src="images/frenchfries.png" alt="Fries" class="hero-emoji fries">
+      </div>
+    </section>
+
+    <!-- Popular Near You -->
+    <section class="popular-section">
+      <span class="section-tag">Popular Near You</span>
+
+      <div class="popular-cards">
+        <div class="popular-card">
+          <img src="images/pasta.png" alt="Pasta" class="popular-emoji">
+          <p class="popular-name">Pasta</p>
+          <span class="popular-price">Rs180</span>
         </div>
-
-    </div>
-
-
-    <h2 class="section-title">
-        Popular Near You
-    </h2>
-
-
-    <div class="food-list">
-
-
-        <div class="food-card">
-
-            <div class="food-img-container">
-                <img class="food-img" src="images/burger.jpg" alt="Burger">
-            </div>
-
-            <div class="food-details">
-                <div class="food-name">
-                    Classic Beef Burger
-                </div>
-
-                <div class="price">
-                    Rs 300
-                </div>
-
-                <div class="time">
-                    20 min
-                </div>
-            </div>
-
+        <div class="popular-card">
+          <img src="images/momos.png" alt="Momo" class="popular-emoji">
+          <p class="popular-name">Momo</p>
+          <span class="popular-price">Rs150</span>
         </div>
+      </div>
 
-
-
-        <div class="food-card">
-
-            <div class="food-img-container">
-                <img class="food-img" src="images/pizza.jpg" alt="Pizza">
-            </div>
-
-            <div class="food-details">
-                <div class="food-name">
-                    Margherita Pizza
-                </div>
-
-                <div class="price">
-                    Rs 350
-                </div>
-
-                <div class="time">
-                    30 min
-                </div>
-            </div>
-
+      <div class="popular-cards">
+        <div class="popular-card wide">
+          <img src="images/frenchfries.png" alt="French Fries" class="popular-emoji">
+          <p class="popular-name">French Fries</p>
+          <span class="popular-price">Rs120</span>
         </div>
+      </div>
+    </section>
 
+    <!-- Explore Categories -->
+    <section class="categories-section">
+      <span class="section-tag">Explore Categories</span>
 
-
-        <div class="food-card">
-
-            <div class="food-img-container">
-                <img class="food-img" src="images/salad.jpg" alt="Salad">
-            </div>
-
-            <div class="food-details">
-                <div class="food-name">
-                    Garden Veggie Salad
-                </div>
-
-                <div class="price">
-                    Rs 250
-                </div>
-
-                <div class="time">
-                    15 min
-                </div>
-            </div>
-
+      <div class="category-list">
+        <div class="category-item">
+          <img src="images/pizza.png" alt="Foods" class="category-emoji">
+          <span class="category-label">Foods</span>
         </div>
-
-
-
-        <div class="food-card">
-
-            <div class="food-img-container">
-                <img class="food-img" src="images/ramen.jpg" alt="Ramen">
-            </div>
-
-            <div class="food-details">
-                <div class="food-name">
-                    Spicy Ramen Bowl
-                </div>
-
-                <div class="price">
-                    Rs 220
-                </div>
-
-                <div class="time">
-                    25 min
-                </div>
-            </div>
-
+        <div class="category-item">
+          <img src="images/icecream.png" alt="Dessert" class="category-emoji">
+          <span class="category-label">Dessert</span>
         </div>
+        <div class="category-item">
+          <img src="images/drinks.png" alt="Drinks" class="category-emoji">
+          <span class="category-label">Drinks</span>
+        </div>
+      </div>
 
+      <button class="order-btn">Order Now</button>
+    </section>
 
-    </div>
-
-</div>
-
+  </div>
 
 </body>
 </html>

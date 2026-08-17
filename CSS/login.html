@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Food Ordering System</title>
-    <link rel="stylesheet" href="css/login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="overlay">
-        <h1>
-            Food Of <br>
-            Your Choice <br>
-            Delivered <br>
-            Hot and Fresh
-        </h1>
-        <form action="#" method="post">
-            <input 
-            type="email"
-            name="email"
-            placeholder="Email"
-            required>
-            <input 
-            type="password"
-            name="password"
-            placeholder="Password"
-            required>
-            <div class="forgot">
-                <a href="#">
-                    Forgot Password?
-                </a>
-            </div>
-            <button type="submit">
-                Log In
-            </button>
-        </form>
 
-        <p class="signup">
-            Don't have an account?
-            <a href="#">
-                Sign Up
-            </a>
-        </p>
+  <div class="login-screen">
+
+    <!-- Left side: food images -->
+    <div class="login-visual">
+      <img src="images/smallburger.png" alt="Burger" class="visual-emoji burger">
+      <img src="images/momo.png" alt="Momo" class="visual-emoji-small momo">
     </div>
-</div>
+
+    <!-- Right side: login form -->
+    <div class="login-form-wrap">
+
+      <h1 class="logo">Foodie<span class="heart">♥</span></h1>
+
+      <h2 class="welcome-title">Welcome Back!</h2>
+      <p class="welcome-subtitle">Login to continue</p>
+
+      <form class="login-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="">
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="">
+        </div>
+
+        <a href="#" class="forgot-link">Forgot Password?</a>
+
+        <button type="submit" class="login-btn">login</button>
+      </form>
+
+      <p class="signup-text">Dont have an account? <a href="#">Sign Up</a></p>
+
+    </div>
+
+  </div>
+
 </body>
 </html>
