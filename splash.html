@@ -3,24 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Foodie - Delicious food, Delivered fast!</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS is inside CSS folder -->
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
 
   <div class="splash-screen">
 
     <div class="food-illustration">
-      <img src="images/Burger.png" alt="Foodie" class="splash-photo">
+      <img src="CSS/images/Burger.png" alt="Foodie" class="splash-photo">
       <div class="plate"></div>
     </div>
 
-    <h1 class="logo">Foodie<span class="heart">♥</span></h1>
+    <h1 class="logo">
+      Foodie<span class="heart">♥</span>
+    </h1>
 
-    <p class="tagline">Delicious food,<br>Delivered fast!</p>
+    <p class="tagline">
+      Delicious food,<br>
+      Delivered fast!
+    </p>
 
     <div class="dots">
       <span class="dot active"></span>
@@ -30,6 +41,13 @@
     </div>
 
   </div>
+
+  <!-- Automatically go to Login after 3 seconds -->
+  <script>
+    setTimeout(function () {
+      window.location.href = "CSS/login.html";
+    }, 3000);
+  </script>
 
 </body>
 </html>

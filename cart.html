@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Cart</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .cart-container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .item-name {
+            font-weight: bold;
+        }
+
+        .remove-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .place-order-btn {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: #e6417a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .place-order-btn:hover {
+            background: #d1305f;
+        }
+
+        .back-btn {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🛒 My Cart</h1>
+
+    <div class="cart-container">
+
+        <div id="cart-items"></div>
+
+        <div class="total">
+            Total: Rs. <span id="total">0</span>
+        </div>
+
+        <button class="place-order-btn" onclick="placeOrder()">
+            Place Order
+        </button>
+
+    </div>
+
+    <a href="CSS/menu.html" class="back-btn">
+        ← Back to Menu
+    </a>
+
+    <script>
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let cartItems = document.getElementById("cart-items");
+
+        let total = 0;
+
+
+        if (cart.length === 0) {
+
+            cartItems.innerHTML =
+                "<h3 style='text-align:center;'>Your cart is empty 😔</h3>";
+
+        } else {
+
+            cart.forEach((item, index) => {
+
+                total += item.price * item.quantity;
+
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+
+                        <div>
+                            <div class="item-name">
+                                ${item.name}
+                            </div>
+
+                            <div>
+                                Rs. ${item.price} × ${item.quantity}
+                            </div>
+                        </div>
+
+                        <button
+                            class="remove-btn"
+                            onclick="removeItem(${index})">
+                            Remove
+                        </button>
+
+                    </div>
+                `;
+
+            });
+        }
+
+
+        document.getElementById("total").innerText = total;
+
+
+        function removeItem(index) {
+
+            cart.splice(index, 1);
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+            location.reload();
+        }
+
+
+        function placeOrder() {
+
+            if (cart.length === 0) {
+
+                alert("Your cart is empty!");
+
+                return;
+            }
+
+            let form = document.createElement("form");
+
+            form.method = "POST";
+
+            form.action = "order.php";
+
+
+            let input = document.createElement("input");
+
+            input.type = "hidden";
+
+            input.name = "cart";
+
+            input.value = JSON.stringify(cart);
+
+
+            form.appendChild(input);
+
+            document.body.appendChild(form);
+
+            form.submit();
+        }
+
+    </script>
+
+</body>
+</html>
+
