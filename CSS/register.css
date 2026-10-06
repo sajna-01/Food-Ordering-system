@@ -1,0 +1,206 @@
+:root {
+  --page-bg: #f9c8de;
+  --card-bg: #f2f2f2;
+  --field-bg: #ebd5d6;
+  --maroon: #6b1424;
+  --rose: #d4606f;
+  --brand: #e03d99;
+  --error: #c0182f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  background: var(--page-bg);
+  font-family: 'Itim', 'Segoe UI', sans-serif;
+  color: var(--maroon);
+  position: relative;
+}
+
+/* ---------- Logo ---------- */
+.brand {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+}
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--brand);
+}
+.logo-heart {
+  width: 34px;
+  height: 34px;
+  fill: var(--brand);
+  margin-top: -6px;
+}
+
+/* ---------- Card ---------- */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 16px 32px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  background: var(--card-bg);
+  border-radius: 34px;
+  padding: 58px 28px 30px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.18), 0 8px 24px rgba(107, 20, 36, 0.12);
+}
+
+.chef {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76px;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  color: var(--maroon);
+}
+.subtitle {
+  text-align: center;
+  color: var(--rose);
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+
+/* ---------- Fields ---------- */
+.field { margin-bottom: 12px; }
+
+label {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 3px;
+  color: var(--maroon);
+}
+
+.input-wrap { position: relative; }
+
+.box {
+  width: 100%;
+  height: 42px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: var(--field-bg);
+  padding: 0 14px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--maroon);
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.box::placeholder { color: #9b8587; }
+.box:focus { border-color: var(--brand); background: #f0dcdd; }
+
+/* Red border once the user has typed something that is not valid */
+.box:not(:placeholder-shown):invalid { border-color: var(--error); }
+
+/* "Incorrect ..." message: hidden until the typed value is invalid */
+.error {
+  display: none;
+  margin-top: 3px;
+  padding-left: 4px;
+  font-size: 0.82rem;
+  color: var(--error);
+}
+.box:not(:placeholder-shown):invalid ~ .error { display: block; }
+
+/* ---------- Show / hide password (CSS only, no JavaScript) ---------- */
+.pw { padding-right: 46px; -webkit-text-security: disc; }
+.pw-check {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.pw-check:checked ~ .pw { -webkit-text-security: none; }
+
+.eye {
+  position: absolute;
+  top: 21px; /* half of the 42px input height, so the icon stays put when an error shows */
+  right: 8px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.pw-check:focus-visible ~ .eye { outline: 2px solid var(--brand); }
+.eye img { width: 22px; height: 22px; display: block; }
+
+/* Diagonal line over the eye while the password is visible */
+.eye::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 2px;
+  margin: -1px 0 0 -12px;
+  background: #222;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+}
+.pw-check:checked ~ .eye::after { display: block; }
+
+/* ---------- Button + link ---------- */
+.register-btn {
+  display: block;
+  width: 100%;
+  height: 46px;
+  margin-top: 18px;
+  border: 0;
+  border-radius: 23px;
+  background: var(--brand);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.1s;
+}
+.register-btn:hover { filter: brightness(1.07); }
+.register-btn:active { transform: scale(0.99); }
+.register-btn:focus-visible { outline: 3px solid var(--maroon); outline-offset: 2px; }
+
+.login-link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.login-link a {
+  color: var(--maroon);
+  font-weight: 700;
+  text-decoration: none;
+}
+.login-link a:hover { text-decoration: underline; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  .brand { position: static; padding: 14px 20px 0; }
+  .logo { font-size: 2.4rem; }
+  .page { min-height: 0; padding-top: 44px; }
+  .card { padding: 58px 20px 26px; }
+}
