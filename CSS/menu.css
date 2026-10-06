@@ -1,33 +1,55 @@
 * {
+
   margin: 0;
+
   padding: 0;
+
   box-sizing: border-box;
+
 }
 
 body {
+
   font-family: 'Poppins', sans-serif;
+
   background: #c9a3a8;
+
 }
 
 .menu-screen {
+
   width: 100%;
+
   min-height: 100vh;
+
   background: #c9a3a8;
+
   padding: 24px 40px 60px;
+
 }
 
 .logo {
+
   font-family: 'Grand Hotel', cursive;
+
   color: #6b1230;
+
   font-weight: 400;
+
   line-height: 1;
+
 }
 
 .heart {
+
   font-size: 16px;
+
   color: #6b1230;
+
   vertical-align: super;
+
   margin-left: 2px;
+
 }
 
 /* =========================================
@@ -35,176 +57,377 @@ body {
    ========================================= */
 
 .navbar {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   background: #ffffff;
+
   border-radius: 30px;
+
   padding: 12px 28px;
+
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+
 }
 
 .navbar .logo {
+
   font-size: 26px;
+
 }
 
 .nav-links {
+
   display: flex;
+
   gap: 28px;
+
 }
 
 .nav-links a {
+
   text-decoration: none;
+
   font-size: 14px;
+
   font-weight: 500;
+
   color: #4a3a3f;
+
 }
 
 .nav-links a.active {
+
   text-decoration: underline;
+
   color: #6b1230;
+
   font-weight: 600;
+
 }
 
 .nav-actions {
+
   display: flex;
+
   align-items: center;
+
   gap: 18px;
+
 }
 
 .search-box {
+
   display: flex;
+
   align-items: center;
+
   gap: 6px;
+
   background: #f6f0f1;
+
   border-radius: 16px;
+
   padding: 6px 14px;
+
 }
 
 .search-box input {
+
   border: none;
+
   background: transparent;
+
   outline: none;
+
   font-family: 'Poppins', sans-serif;
+
   font-size: 13px;
+
   width: 120px;
+
 }
 
 .search-icon {
+
   width: 16px;
+
   height: 16px;
+
   object-fit: contain;
+
   opacity: 0.6;
+
+}
+
+
+/* =========================================
+   CART
+   ========================================= */
+
+.cart-container {
+
+  position: relative;
+
+  display: inline-block;
+
 }
 
 .cart-icon {
+
   width: 22px;
+
   height: 22px;
+
   object-fit: contain;
+
   cursor: pointer;
+
 }
+
+.cart-count {
+
+  position: absolute;
+
+  top: -8px;
+
+  right: -8px;
+
+  width: 18px;
+
+  height: 18px;
+
+  background: #e6417a;
+
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+}
+
 
 /* =========================================
    MENU TITLE
    ========================================= */
 
 .menu-title {
+
   text-align: center;
+
   color: #ffffff;
+
   font-size: 24px;
+
   font-weight: 700;
+
   margin: 26px 0;
+
   letter-spacing: 0.5px;
+
 }
+
 
 /* =========================================
    MENU COLUMNS
    ========================================= */
 
 .menu-columns {
+
   display: flex;
+
   gap: 20px;
+
 }
 
 .menu-column {
+
   flex: 1;
+
   background: #b98d93;
+
   border-radius: 16px;
+
   padding: 20px;
+
 }
 
 .column-title {
+
   font-size: 16px;
+
   font-weight: 700;
+
   color: #4a1520;
+
   margin-bottom: 14px;
+
   padding-bottom: 8px;
+
   border-bottom: 2px solid rgba(74, 21, 32, 0.2);
+
 }
 
 .sub-title {
+
   font-size: 13px;
+
   font-weight: 600;
+
   color: #4a1520;
+
   margin: 14px 0 8px;
+
 }
 
+
 /* ---- Menu item row ---- */
+
 .menu-item {
+
   display: flex;
+
   align-items: center;
+
   gap: 12px;
+
   background: #ffffff;
+
   border-radius: 10px;
+
   padding: 8px 12px;
+
   margin-bottom: 8px;
+
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
 }
 
 .item-emoji {
+
   width: 34px;
+
   height: 34px;
+
   object-fit: contain;
+
   flex-shrink: 0;
+
 }
 
 .item-info {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   width: 100%;
+
 }
 
 .item-name {
+
   font-size: 12px;
+
   font-weight: 500;
+
   color: #2b2020;
+
 }
 
 .item-price {
+
   font-size: 11px;
+
   font-weight: 600;
+
   color: #e6417a;
+
   white-space: nowrap;
+
   margin-left: 8px;
+
 }
+
+
+/* =========================================
+   ADD TO CART BUTTON
+   ========================================= */
+
+.add-cart-btn {
+
+  padding: 5px 9px;
+
+  background: #e6417a;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 14px;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  margin-left: 8px;
+
+}
+
+.add-cart-btn:hover {
+
+  background: #d1305f;
+
+}
+
 
 /* =========================================
    RESPONSIVE
    ========================================= */
 
 @media (max-width: 800px) {
+
   .menu-screen {
+
     padding: 18px 18px 40px;
+
   }
 
   .navbar {
+
     flex-wrap: wrap;
+
     gap: 12px;
+
     border-radius: 20px;
+
   }
 
   .menu-columns {
+
     flex-direction: column;
+
   }
+
 }
