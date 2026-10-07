@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ==============================
+   OUTER PINK BACKGROUND
+============================== */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px;
+
+    background: linear-gradient(
+        135deg,
+        #f9c9d6,
+        #f7bdd0
+    );
+}
+
+
+/* ==============================
+   MAIN WHITE CARD
+============================== */
+
+.login-card {
+    width: 100%;
+    max-width: 1050px;
+
+    min-height: 620px;
+
+    display: flex;
+
+    background: white;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(120, 60, 80, 0.18);
+}
+
+
+/* ==============================
+   LEFT PINK SECTION
+============================== */
+
+.left-section {
+    width: 50%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #f9c9d6,
+        #f6b8cc
+    );
+
+    overflow: hidden;
+}
+
+
+.food-content {
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.food-content h2 {
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #302226;
+
+    margin-bottom: 5px;
+}
+
+
+.food-content p {
+    font-size: 14px;
+
+    color: #715d64;
+
+    margin-bottom: 18px;
+}
+
+
+/* ==============================
+   BURGER IMAGE
+============================== */
+
+.burger-image {
+    width: 300px;
+    height: 300px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto;
+
+    filter:
+        drop-shadow(
+            0 18px 20px rgba(80, 40, 50, 0.20)
+        );
+}
+
+
+/* ==============================
+   MOMO IMAGE
+============================== */
+
+.momo-image {
+    position: absolute;
+
+    width: 105px;
+    height: 105px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 7px;
+
+    background: white;
+
+    top: 30px;
+    right: 30px;
+
+    box-shadow:
+        0 10px 25px rgba(80, 40, 50, 0.15);
+
+    z-index: 3;
+}
+
+
+/* ==============================
+   RIGHT WHITE SECTION
+============================== */
+
+.right-section {
+    width: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 55px;
+}
+
+
+/* ==============================
+   LOGO
+============================== */
+
+.logo {
+    font-family: 'Grand Hotel', cursive;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    color: #e6417a;
+
+    line-height: 1;
+
+    margin-bottom: 27px;
+}
+
+
+.logo span {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 19px;
+
+    vertical-align: super;
+
+    margin-left: 3px;
+}
+
+
+/* ==============================
+   WELCOME
+============================== */
+
+.welcome {
+    font-size: 23px;
+
+    font-weight: 600;
+
+    color: #302226;
+
+    margin-bottom: 5px;
+}
+
+
+.subtitle {
+    font-size: 13px;
+
+    color: #827177;
+
+    margin-bottom: 28px;
+}
+
+
+/* ==============================
+   FORM
+============================== */
+
+.login-form {
+    width: 100%;
+
+    max-width: 350px;
+}
+
+
+.input-box {
+    width: 100%;
+
+    margin-bottom: 18px;
+}
+
+
+.input-box label {
+    display: block;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: #3a2c31;
+
+    margin-bottom: 7px;
+}
+
+
+.input-box input {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #e5dadd;
+
+    border-radius: 12px;
+
+    background: #fffafa;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    color: #302226;
+}
+
+
+.input-box input::placeholder {
+    color: #aaa1a5;
+}
+
+
+.input-box input:focus {
+    border-color: #e6417a;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(230, 65, 122, 0.08);
+}
+
+
+/* ==============================
+   FORGOT PASSWORD
+============================== */
+
+.forgot {
+    text-align: right;
+
+    margin-top: -5px;
+
+    margin-bottom: 20px;
+}
+
+
+.forgot a {
+    font-size: 12px;
+
+    color: #e6417a;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   LOGIN BUTTON
+============================== */
+
+.login-button {
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #e6417a;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(230, 65, 122, 0.25);
+
+    transition: 0.2s;
+}
+
+
+.login-button:hover {
+    background: #d8326b;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   SIGN UP
+============================== */
+
+.signup {
+    margin-top: 23px;
+
+    font-size: 13px;
+
+    color: #4a3b40;
+}
+
+
+.signup a {
+    color: #e6417a;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+
+    cursor: pointer;
+}
+
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 750px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .login-card {
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    .left-section {
+        min-height: 330px;
+    }
+
+    .right-section {
+        min-height: 500px;
+
+        padding: 40px 25px;
+    }
+
+    .burger-image {
+        width: 210px;
+        height: 210px;
+    }
+
+    .momo-image {
+        width: 75px;
+        height: 75px;
+
+        top: 20px;
+        right: 20px;
+    }
+
+    .food-content h2 {
+        font-size: 25px;
+    }
+
+}
