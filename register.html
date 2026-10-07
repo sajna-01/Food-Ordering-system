@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Create Account</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <div class="register-page">
+
+        <div class="register-left">
+            <h1 class="logo">
+                Foodie<span>♥</span>
+            </h1>
+        </div>
+
+        <div class="register-form-wrap">
+
+            <img src="CSS/images/chef.png" alt="Chef" class="chef-image">
+
+            <h2 class="register-title">Create an Account</h2>
+
+            <form action="register.php" method="POST">
+
+                <div class="input-group">
+                    <label for="full_name">Full Name</label>
+                    <input type="text" id="full_name" name="full_name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-box">
+                        <input type="password" id="password" name="password"
+                               placeholder="Enter your password" required>
+
+                        <span onclick="togglePassword('password', this)">👁</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm_password">Confirm Password</label>
+
+                    <div class="password-box">
+                        <input type="password" id="confirm_password"
+                               name="confirm_password"
+                               placeholder="Confirm your password" required>
+
+                        <span onclick="togglePassword('confirm_password', this)">👁</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="register-btn">
+                    Register
+                </button>
+
+            </form>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="CSS/login.html">Login</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(id, icon) {
+            const password = document.getElementById(id);
+
+            if (password.type === "password") {
+                password.type = "text";
+                icon.textContent = "🙈";
+            } else {
+                password.type = "password";
+                icon.textContent = "👁";
+            }
+        }
+    </script>
+
+</body>
+</html>
