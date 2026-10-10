@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="login.css">
+
+    <style>
+        .error-message {
+            display: none;
+            color: #e53935;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,11 +31,8 @@
     <div class="login-screen">
 
         <div class="login-visual">
-
             <div class="visual-content">
-
                 <h2>Delicious Food</h2>
-
                 <p>Fresh . Tasty . Fast</p>
 
                 <img
@@ -31,7 +40,6 @@
                     alt="Burger"
                     class="visual-emoji burger"
                 >
-
             </div>
 
             <img
@@ -39,9 +47,7 @@
                 alt="Momo"
                 class="visual-emoji-small momo"
             >
-
         </div>
-
 
         <div class="login-form-wrap">
 
@@ -49,14 +55,13 @@
                 Foodie<span class="heart">♥</span>
             </h1>
 
-            <h2 class="welcome-title">
-                Welcome Back!
-            </h2>
+            <h2 class="welcome-title">Welcome Back!</h2>
 
-            <p class="welcome-subtitle">
-                Login to continue
+            <p class="welcome-subtitle">Login to continue</p>
+
+            <p id="error-message" class="error-message">
+                Invalid email or password!
             </p>
-
 
             <form
                 class="login-form"
@@ -65,7 +70,6 @@
             >
 
                 <div class="input-group">
-
                     <label for="email">Email</label>
 
                     <input
@@ -73,13 +77,11 @@
                         id="email"
                         name="email"
                         placeholder="Enter your email"
+                        required
                     >
-
                 </div>
 
-
                 <div class="input-group">
-
                     <label for="password">Password</label>
 
                     <input
@@ -87,36 +89,36 @@
                         id="password"
                         name="password"
                         placeholder="Enter your password"
+                        required
                     >
-
                 </div>
-
 
                 <a href="#" class="forgot-link">
                     Forgot Password?
                 </a>
 
-
-                <button
-                    type="submit"
-                    class="login-btn"
-                >
+                <button type="submit" class="login-btn">
                     Login
                 </button>
 
             </form>
 
-
             <p class="signup-text">
                 Don't have an account?
-                <a href="../register.html">
-                    Sign Up
-                </a>
+                <a href="../register.html">Sign Up</a>
             </p>
 
         </div>
 
     </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get("error") === "invalid") {
+            document.getElementById("error-message").style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
