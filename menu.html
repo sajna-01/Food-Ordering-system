@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Menu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
+
+    <style>
+        .add-cart-btn {
+            margin-top: 8px;
+            padding: 7px 14px;
+            border: none;
+            border-radius: 20px;
+            background: #e6417a;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .add-cart-btn:hover {
+            background: #d1305f;
+        }
+
+        .item-info { flex: 1; }
+
+        .cart-link {
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cart-icon {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -9px;
+            right: -10px;
+            min-width: 20px;
+            height: 20px;
+            padding: 0 5px;
+            border-radius: 50px;
+            background: #e6417a;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .cart-count:empty {
+            display: none;
+        }
+
+        .cart-message {
+            position: fixed;
+            top: 85px;
+            right: 20px;
+            z-index: 9999;
+            background: #e6417a;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            box-shadow: 0 4px 12px #0002;
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            transition: 0.25s;
+        }
+
+        .cart-message.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+<div class="menu-screen">
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <h1 class="logo">
+            Foodie<span class="heart">♥</span>
+        </h1>
+
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="../logout.php">Logout</a>
+        </nav>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <a href="../cart.html" class="cart-link" aria-label="Shopping cart">
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png"
+                        alt="Cart"
+                        class="cart-icon"
+                    >
+                    <span id="cartCount" class="cart-count"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div id="cartMessage" class="cart-message" role="status"></div>
+
+    <h2 class="menu-title">Our Menu</h2>
+
+    <div class="menu-columns">
+
+        <!-- FOODS -->
+        <div class="menu-column">
+            <h3 class="column-title">Foods</h3>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300" alt="Burger" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Burger</p>
+                    <span class="item-price">Rs.300</span>
+                    <button class="add-cart-btn" onclick="addToCart('Burger',300)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=300" alt="Momo" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Momo</p>
+                    <span class="item-price">Rs.180</span>
+                    <button class="add-cart-btn" onclick="addToCart('Momo',180)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?w=300" alt="Chowmein" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Chowmein</p>
+                    <span class="item-price">Rs.150</span>
+                    <button class="add-cart-btn" onclick="addToCart('Chowmein',150)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=300" alt="Sandwich" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Sandwich</p>
+                    <span class="item-price">Rs.220</span>
+                    <button class="add-cart-btn" onclick="addToCart('Sandwich',220)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=300" alt="Fried Rice" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Fried Rice</p>
+                    <span class="item-price">Rs.200</span>
+                    <button class="add-cart-btn" onclick="addToCart('Fried Rice',200)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=300" alt="Pizza" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Pizza</p>
+                    <span class="item-price">Rs.450</span>
+                    <button class="add-cart-btn" onclick="addToCart('Pizza',450)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DESSERTS -->
+        <div class="menu-column">
+            <h3 class="column-title">Desserts</h3>
+
+            <p class="sub-title">Ice-Cream</p>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=300" alt="Butterscotch" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Butterscotch</p>
+                    <span class="item-price">Rs.150</span>
+                    <button class="add-cart-btn" onclick="addToCart('Butterscotch',150)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=300" alt="Vanilla" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Vanilla</p>
+                    <span class="item-price">Rs.120</span>
+                    <button class="add-cart-btn" onclick="addToCart('Vanilla',120)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=300" alt="Blueberry Ice Cream" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Blueberry</p>
+                    <span class="item-price">Rs.160</span>
+                    <button class="add-cart-btn" onclick="addToCart('Blueberry',160)">Add to Cart</button>
+                </div>
+            </div>
+
+            <p class="sub-title">Cake</p>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300" alt="Chocolate Cake" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Chocolate Cake</p>
+                    <span class="item-price">Rs.400</span>
+                    <button class="add-cart-btn" onclick="addToCart('Chocolate Cake',400)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=300" alt="Red Velvet Cake" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Red Velvet</p>
+                    <span class="item-price">Rs.450</span>
+                    <button class="add-cart-btn" onclick="addToCart('Red Velvet',450)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=300" alt="Pineapple Cake" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Pineapple Cake</p>
+                    <span class="item-price">Rs.380</span>
+                    <button class="add-cart-btn" onclick="addToCart('Pineapple Cake',380)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DRINKS -->
+        <div class="menu-column">
+            <h3 class="column-title">Drinks</h3>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=300" alt="Virgin Mojito" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Virgin Mojito</p>
+                    <span class="item-price">Rs.150</span>
+                    <button class="add-cart-btn" onclick="addToCart('Virgin Mojito',150)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=300" alt="Oreo Shake" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Oreo Shake</p>
+                    <span class="item-price">Rs.180</span>
+                    <button class="add-cart-btn" onclick="addToCart('Oreo Shake',180)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300" alt="Cold Coffee" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Cold Coffee</p>
+                    <span class="item-price">Rs.160</span>
+                    <button class="add-cart-btn" onclick="addToCart('Cold Coffee',160)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=300" alt="Iced Latte" class="item-emoji">
+                <div class="item-info">
+                    <p class="item-name">Iced Latte</p>
+                    <span class="item-price">Rs.170</span>
+                    <button class="add-cart-btn" onclick="addToCart('Iced Latte',170)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // Read cart data saved in the browser
+    function getCart() {
+        try {
+            const savedCart = JSON.parse(localStorage.getItem("cart"));
+            return Array.isArray(savedCart) ? savedCart : [];
+        } catch (error) {
+            return [];
+        }
+    }
+
+    // Show the total number of items beside the cart icon
+    function updateCartCount() {
+        const cart = getCart();
+
+        const totalItems = cart.reduce(function(total, item) {
+            return total + (Number(item.quantity) || 1);
+        }, 0);
+
+        const countElement = document.getElementById("cartCount");
+
+        countElement.textContent = totalItems > 0 ? totalItems : "";
+    }
+
+    // Add an item or increase its quantity
+    function addToCart(name, price) {
+        const cart = getCart();
+
+        const existingItem = cart.find(function(item) {
+            return item.name === name;
+        });
+
+        if (existingItem) {
+            existingItem.quantity = (Number(existingItem.quantity) || 1) + 1;
+        } else {
+            cart.push({
+                name: name,
+                price: price,
+                quantity: 1
+            });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        updateCartCount();
+        showCartMessage(name + " added to cart!");
+    }
+
+    // Show a small message instead of a popup alert
+    let messageTimeout;
+
+    function showCartMessage(message) {
+        const messageElement = document.getElementById("cartMessage");
+
+        messageElement.textContent = message;
+        messageElement.classList.add("show");
+
+        clearTimeout(messageTimeout);
+
+        messageTimeout = setTimeout(function() {
+            messageElement.classList.remove("show");
+        }, 1800);
+    }
+
+    // Display the saved cart count when the menu opens
+    document.addEventListener("DOMContentLoaded", function() {
+        updateCartCount();
+    });
+
+    // Update the count if cart data changes in another browser tab
+    window.addEventListener("storage", function(event) {
+        if (event.key === "cart") {
+            updateCartCount();
+        }
+    });
+</script>
+</body>
+</html>

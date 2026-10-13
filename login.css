@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,439 +6,204 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-}
-
-
-/* ==============================
-   OUTER PINK BACKGROUND
-============================== */
-
-.page {
     min-height: 100vh;
-
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f9c9d6, #f4a8c0);
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    padding: 35px;
-
-    background: linear-gradient(
-        135deg,
-        #f9c9d6,
-        #f7bdd0
-    );
+    align-items: center;
+    padding: 20px;
 }
 
-
-/* ==============================
-   MAIN WHITE CARD
-============================== */
-
-.login-card {
+/* Login Card */
+.login-container {
+    position: relative;
     width: 100%;
-    max-width: 1050px;
-
-    min-height: 620px;
-
-    display: flex;
-
-    background: white;
-
-    border-radius: 30px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 20px 50px rgba(120, 60, 80, 0.18);
+    max-width: 440px;
+    padding: 100px 30px 32px;
+    background: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(160, 50, 85, 0.12);
 }
 
-
-/* ==============================
-   LEFT PINK SECTION
-============================== */
-
-.left-section {
-    width: 50%;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: linear-gradient(
-        145deg,
-        #f9c9d6,
-        #f6b8cc
-    );
-
-    overflow: hidden;
-}
-
-
-.food-content {
-    text-align: center;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-
-.food-content h2 {
-    font-size: 32px;
-
-    font-weight: 700;
-
-    color: #302226;
-
-    margin-bottom: 5px;
-}
-
-
-.food-content p {
-    font-size: 14px;
-
-    color: #715d64;
-
-    margin-bottom: 18px;
-}
-
-
-/* ==============================
-   BURGER IMAGE
-============================== */
-
-.burger-image {
-    width: 300px;
-    height: 300px;
-
-    object-fit: contain;
-
-    display: block;
-
-    margin: 0 auto;
-
-    filter:
-        drop-shadow(
-            0 18px 20px rgba(80, 40, 50, 0.20)
-        );
-}
-
-
-/* ==============================
-   MOMO IMAGE
-============================== */
-
+/* Burger and Momo Images */
+.burger-image,
 .momo-image {
     position: absolute;
-
-    width: 105px;
-    height: 105px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    padding: 7px;
-
-    background: white;
-
-    top: 30px;
-    right: 30px;
-
-    box-shadow:
-        0 10px 25px rgba(80, 40, 50, 0.15);
-
-    z-index: 3;
+    top: 10px;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
 }
 
-
-/* ==============================
-   RIGHT WHITE SECTION
-============================== */
-
-.right-section {
-    width: 50%;
-
-    background: #ffffff;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 55px;
+.burger-image {
+    left: 10px;
 }
 
+.momo-image {
+    right: 10px;
+}
 
-/* ==============================
-   LOGO
-============================== */
-
-.logo {
+/* Foodie Logo */
+.foodie-logo {
+    text-align: center;
     font-family: 'Grand Hotel', cursive;
-
-    font-size: 55px;
-
-    font-weight: 400;
-
-    color: #e6417a;
-
-    line-height: 1;
-
-    margin-bottom: 27px;
-}
-
-
-.logo span {
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 19px;
-
-    vertical-align: super;
-
-    margin-left: 3px;
-}
-
-
-/* ==============================
-   WELCOME
-============================== */
-
-.welcome {
-    font-size: 23px;
-
-    font-weight: 600;
-
-    color: #302226;
-
-    margin-bottom: 5px;
-}
-
-
-.subtitle {
-    font-size: 13px;
-
-    color: #827177;
-
-    margin-bottom: 28px;
-}
-
-
-/* ==============================
-   FORM
-============================== */
-
-.login-form {
-    width: 100%;
-
-    max-width: 350px;
-}
-
-
-.input-box {
-    width: 100%;
-
-    margin-bottom: 18px;
-}
-
-
-.input-box label {
-    display: block;
-
-    text-align: left;
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    color: #3a2c31;
-
-    margin-bottom: 7px;
-}
-
-
-.input-box input {
-    width: 100%;
-
-    height: 48px;
-
-    border: 1px solid #e5dadd;
-
-    border-radius: 12px;
-
-    background: #fffafa;
-
-    padding: 0 15px;
-
-    outline: none;
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 13px;
-
-    color: #302226;
-}
-
-
-.input-box input::placeholder {
-    color: #aaa1a5;
-}
-
-
-.input-box input:focus {
-    border-color: #e6417a;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 0 0 3px rgba(230, 65, 122, 0.08);
-}
-
-
-/* ==============================
-   FORGOT PASSWORD
-============================== */
-
-.forgot {
-    text-align: right;
-
-    margin-top: -5px;
-
+    font-size: 32px;
+    font-weight: normal;
+    color: #e62950;
     margin-bottom: 20px;
 }
 
-
-.forgot a {
-    font-size: 12px;
-
-    color: #e6417a;
-
-    text-decoration: none;
+.foodie-logo span {
+    color: #e62950;
 }
 
+/* Welcome Text */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 27px;
+}
 
-/* ==============================
-   LOGIN BUTTON
-============================== */
-
-.login-button {
-    width: 100%;
-
-    height: 48px;
-
-    border: none;
-
-    border-radius: 25px;
-
-    background: #e6417a;
-
-    color: white;
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 14px;
-
+.welcome-section h2 {
+    color: #000000;
+    font-size: 25px;
     font-weight: 600;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 8px 18px rgba(230, 65, 122, 0.25);
-
-    transition: 0.2s;
+    margin-bottom: 7px;
 }
 
-
-.login-button:hover {
-    background: #d8326b;
-
-    transform: translateY(-1px);
-}
-
-
-/* ==============================
-   SIGN UP
-============================== */
-
-.signup {
-    margin-top: 23px;
-
+.welcome-section p {
+    color: #000000;
     font-size: 13px;
-
-    color: #4a3b40;
 }
 
+/* Error Message */
+.error-message {
+    display: none;
+    background: #fff0f2;
+    color: #d71943;
+    border: 1px solid #f2a5b4;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
 
-.signup a {
-    color: #e6417a;
+/* Input Fields */
+.form-group {
+    margin-bottom: 18px;
+}
 
+.form-group label {
+    display: block;
+    color: #000000;
+    font-size: 13px;
     font-weight: 600;
-
-    text-decoration: none;
-
-    margin-left: 5px;
-
-    cursor: pointer;
+    margin-bottom: 8px;
 }
 
+.form-group input {
+    display: block;
+    width: 100%;
+    height: 47px;
+    padding: 0 14px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 9px;
+    outline: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
 
-.signup a:hover {
+.form-group input::placeholder {
+    color: #888888;
+}
+
+.form-group input:focus {
+    border-color: #e62950;
+    box-shadow: 0 0 0 3px rgba(230, 41, 80, 0.10);
+}
+
+/* Forgot Password */
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #000000;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: -4px;
+    margin-bottom: 22px;
+}
+
+.forgot-password:hover {
     text-decoration: underline;
 }
 
+/* Login Button */
+.login-btn {
+    display: block;
+    width: 100%;
+    height: 47px;
+    border: none;
+    border-radius: 9px;
+    background: #e62950;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
-/* ==============================
-   MOBILE
-============================== */
+.login-btn:hover {
+    background: #c91d43;
+}
 
-@media (max-width: 750px) {
+/* Sign Up Link */
+.signup-text {
+    text-align: center;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 23px;
+}
 
-    .page {
-        padding: 15px;
+.signup-text a {
+    color: #e62950;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 90px 23px 28px;
     }
 
-    .login-card {
-        flex-direction: column;
-
-        min-height: auto;
-    }
-
-    .left-section,
-    .right-section {
-        width: 100%;
-    }
-
-    .left-section {
-        min-height: 330px;
-    }
-
-    .right-section {
-        min-height: 500px;
-
-        padding: 40px 25px;
+    .burger-image,
+    .momo-image {
+        width: 62px;
+        height: 62px;
+        top: 8px;
     }
 
     .burger-image {
-        width: 210px;
-        height: 210px;
+        left: 8px;
     }
 
     .momo-image {
-        width: 75px;
-        height: 75px;
-
-        top: 20px;
-        right: 20px;
+        right: 8px;
     }
 
-    .food-content h2 {
-        font-size: 25px;
+    .foodie-logo {
+        font-size: 29px;
     }
 
+    .welcome-section h2 {
+        font-size: 23px;
+    }
 }

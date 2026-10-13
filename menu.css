@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #f9c9d6;
+
+    /* Scroll */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* =========================================
+   MENU SCREEN
+========================================= */
+
+.menu-screen {
+    width: 100%;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #f9c9d6 0%,
+        #f7bdd0 100%
+    );
+
+    padding: 24px 40px 60px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-radius: 30px;
+
+    padding: 12px 28px;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Logo */
+
+.logo {
+    font-family: 'Grand Hotel', cursive;
+    color: #e6417a;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.heart {
+    font-size: 16px;
+    color: #e6417a;
+
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #4a3a3f;
+}
+
+.nav-links a:hover {
+    color: #e6417a;
+}
+
+.nav-links a.active {
+    color: #e6417a;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   SEARCH + CART
+========================================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    background: #f6f0f1;
+
+    border-radius: 16px;
+
+    padding: 6px 14px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+
+    width: 90px;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+
+    object-fit: contain;
+    opacity: 0.6;
+}
+
+.cart-icon {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MENU TITLE
+========================================= */
+
+.menu-title {
+    text-align: center;
+
+    margin-top: 26px;
+    margin-bottom: 20px;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    color: #2b2020;
+}
+
+
+/* =========================================
+   THREE COLUMNS
+========================================= */
+
+.menu-columns {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   COLUMN
+========================================= */
+
+.menu-column {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Column title */
+
+.column-title {
+    display: block;
+
+    color: #e6417a;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+
+    margin-bottom: 12px;
+}
+
+
+/* Dessert sub titles */
+
+.sub-title {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #6b5a5e;
+
+    margin: 8px 0 7px;
+}
+
+
+/* =========================================
+   MENU ITEMS
+========================================= */
+
+.menu-item {
+    width: 100%;
+
+    min-height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 9px;
+
+    padding: 7px 9px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s ease;
+}
+
+.menu-item:hover {
+    background: #fdeaf0;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   FOOD IMAGE
+========================================= */
+
+.item-emoji {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   ITEM INFORMATION
+========================================= */
+
+.item-info {
+    flex: 1;
+
+    min-width: 0;
+
+    margin-left: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+
+/* Food name */
+
+.item-name {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #2b2020;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.item-price {
+    display: inline-block;
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #e6417a;
+
+    background: #fdeaf0;
+
+    padding: 4px 8px;
+
+    border-radius: 10px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .menu-screen {
+        padding: 20px 25px 50px;
+    }
+
+    .menu-columns {
+        gap: 12px;
+    }
+
+    .menu-column {
+        padding: 11px;
+    }
+
+    .item-emoji {
+        width: 44px;
+        height: 44px;
+    }
+
+    .item-info {
+        margin-left: 8px;
+    }
+
+    .item-name {
+        font-size: 11px;
+    }
+
+    .item-price {
+        font-size: 10px;
+        padding: 3px 7px;
+    }
+}
+
+
+/* =========================================
+   SMALL SCREEN
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .menu-screen {
+        padding: 18px 18px 40px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+
+        border-radius: 20px;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+    .menu-title {
+        font-size: 23px;
+        margin-top: 20px;
+    }
+
+    /* Mobile मा columns तल-तल आउँछन् */
+    .menu-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-column {
+        width: 100%;
+    }
+}

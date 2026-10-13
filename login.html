@@ -4,119 +4,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Foodie - Login</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="login.css">
-
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f9c9d6, #f4a8c0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            position: relative;
+            width: 100%;
+            max-width: 440px;
+            padding: 65px 35px 32px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 24px;
+            box-shadow: 0 12px 35px rgba(160, 50, 85, 0.12);
+        }
+
+        /* BURGER - TOP LEFT CORNER */
+
+        .burger-image {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 76px;
+            height: 76px;
+            object-fit: contain;
+        }
+
+        /* MOMO - TOP RIGHT CORNER */
+
+        .momo-image {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 76px;
+            height: 76px;
+            object-fit: contain;
+        }
+
+        /* SMALL FOODIE LOGO AT TOP CENTER */
+
+        .foodie-logo {
+            text-align: center;
+            font-family: 'Grand Hotel', cursive;
+            font-size: 31px;
+            font-weight: normal;
+            color: #e62950;
+            margin-bottom: 20px;
+        }
+
+        .foodie-logo span {
+            color: #e62950;
+        }
+
+        /* WELCOME TEXT - BLACK */
+
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 27px;
+        }
+
+        .welcome-section h2 {
+            color: #000000;
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .welcome-section p {
+            color: #000000;
+            font-size: 13px;
+        }
+
+        /* ERROR MESSAGE */
+
         .error-message {
             display: none;
-            color: #e53935;
+            background: #fff0f2;
+            color: #d71943;
+            border: 1px solid #f2a5b4;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
+
+        /* EMAIL AND PASSWORD - BLACK LABELS */
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #000000;
             font-size: 13px;
-            font-weight: 500;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            height: 47px;
+            padding: 0 14px;
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            border-radius: 9px;
+            outline: none;
+            color: #000000;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+
+        .form-group input::placeholder {
+            color: #888888;
+        }
+
+        .form-group input:focus {
+            border-color: #e62950;
+            box-shadow: 0 0 0 3px rgba(230, 41, 80, 0.10);
+        }
+
+        /* FORGOT PASSWORD */
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            color: #000000;
+            font-size: 12px;
+            text-decoration: none;
+            margin-top: -4px;
+            margin-bottom: 22px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        /* RED LOGIN BUTTON */
+
+        .login-btn {
+            width: 100%;
+            height: 47px;
+            border: none;
+            border-radius: 9px;
+            background: #e62950;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #c91d43;
+        }
+
+        /* SIGN UP */
+
+        .signup-text {
             text-align: center;
-            margin: 10px 0;
+            color: #000000;
+            font-size: 12px;
+            margin-top: 23px;
+        }
+
+        .signup-text a {
+            color: #e62950;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .signup-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 65px 23px 28px;
+            }
+
+            .burger-image,
+            .momo-image {
+                width: 65px;
+                height: 65px;
+                top: 8px;
+            }
+
+            .burger-image {
+                left: 8px;
+            }
+
+            .momo-image {
+                right: 8px;
+            }
+
+            .foodie-logo {
+                font-size: 29px;
+            }
+
+            .welcome-section h2 {
+                font-size: 23px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="login-screen">
+    <main class="login-container">
 
-        <div class="login-visual">
-            <div class="visual-content">
-                <h2>Delicious Food</h2>
-                <p>Fresh . Tasty . Fast</p>
+        <img
+            src="images/smallburger.png"
+            alt="Burger"
+            class="burger-image"
+        >
 
-                <img
-                    src="images/smallburger.png"
-                    alt="Burger"
-                    class="visual-emoji burger"
+        <img
+            src="images/momo.png"
+            alt="Momo"
+            class="momo-image"
+        >
+
+        <h1 class="foodie-logo">Foodie<span>♥</span></h1>
+
+        <div class="welcome-section">
+            <h2>Welcome Back!</h2>
+            <p>Login to Continue</p>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+            Invalid email or password. Please try again.
+        </div>
+
+        <form action="../login.php" method="POST">
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
                 >
             </div>
 
-            <img
-                src="images/momo.png"
-                alt="Momo"
-                class="visual-emoji-small momo"
-            >
-        </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
 
-        <div class="login-form-wrap">
+            <a href="#" class="forgot-password">Forgot Password?</a>
 
-            <h1 class="logo">
-                Foodie<span class="heart">♥</span>
-            </h1>
+            <button type="submit" class="login-btn">Login</button>
 
-            <h2 class="welcome-title">Welcome Back!</h2>
+        </form>
 
-            <p class="welcome-subtitle">Login to continue</p>
+        <p class="signup-text">
+            Don't have an account?
+            <a href="register.html">Sign Up</a>
+        </p>
 
-            <p id="error-message" class="error-message">
-                Invalid email or password!
-            </p>
-
-            <form
-                class="login-form"
-                action="../login.php"
-                method="POST"
-            >
-
-                <div class="input-group">
-                    <label for="email">Email</label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-                </div>
-
-                <div class="input-group">
-                    <label for="password">Password</label>
-
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Enter your password"
-                        required
-                    >
-                </div>
-
-                <a href="#" class="forgot-link">
-                    Forgot Password?
-                </a>
-
-                <button type="submit" class="login-btn">
-                    Login
-                </button>
-
-            </form>
-
-            <p class="signup-text">
-                Don't have an account?
-                <a href="../register.html">Sign Up</a>
-            </p>
-
-        </div>
-
-    </div>
+    </main>
 
     <script>
         const params = new URLSearchParams(window.location.search);
 
         if (params.get("error") === "invalid") {
-            document.getElementById("error-message").style.display = "block";
+            document.getElementById("errorMessage").style.display = "block";
         }
     </script>
 

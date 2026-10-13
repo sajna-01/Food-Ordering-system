@@ -1,105 +1,258 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Foodie - Create Account</title>
+<title>Foodie - Sign Up</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <link rel="stylesheet" href="register.css">
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fbd0dc, #f5b5c9);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+/* FOODIE LOGO */
+.logo {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 52px;
+    font-weight: bold;
+    color: #d93662;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+/* WHITE CARD */
+.signup-card {
+    width: 100%;
+    max-width: 380px;
+    background: #fff;
+    padding: 20px 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(180, 57, 97, 0.15);
+}
+
+/* CHEF PHOTO */
+.chef-photo {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin: 0 auto 5px;
+}
+
+.signup-card h1 {
+    text-align: center;
+    color: #352830;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #999099;
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+/* INPUT FIELDS */
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    color: #51434b;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 37px;
+    padding: 0 11px;
+    border: 1px solid #eadde2;
+    border-radius: 7px;
+    outline: none;
+    background: #fffafb;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+}
+
+.input-group input:focus {
+    border-color: #df6389;
+    box-shadow: 0 0 0 2px rgba(223, 99, 137, 0.10);
+}
+
+/* REGISTER BUTTON */
+.register-btn {
+    width: 100%;
+    height: 39px;
+    border: none;
+    border-radius: 7px;
+    background: #d93662;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.register-btn:hover {
+    background: #bd2851;
+}
+
+/* SIGN IN */
+.login-text {
+    text-align: center;
+    color: #8e858c;
+    font-size: 10px;
+    margin-top: 12px;
+}
+
+.login-text a {
+    color: #d93662;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* SMALL SCREENS */
+@media (max-height: 750px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .logo {
+        font-size: 42px;
+        margin-bottom: 7px;
+    }
+
+    .signup-card {
+        padding: 13px 23px;
+    }
+
+    .chef-photo {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 3px;
+    }
+
+    .signup-card h1 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        margin-bottom: 10px;
+    }
+
+    .input-group {
+        margin-bottom: 7px;
+    }
+
+    .input-group input {
+        height: 34px;
+    }
+
+    .login-text {
+        margin-top: 8px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="register-page">
+    <div class="logo">Foodie</div>
 
-        <div class="register-left">
-            <h1 class="logo">
-                Foodie<span>♥</span>
-            </h1>
-        </div>
+    <div class="signup-card">
 
-        <div class="register-form-wrap">
+        <!-- Chef photo: keep chef.png inside CSS/images -->
+        <img
+            src="images/chef.png"
+            alt="Chef"
+            class="chef-photo"
+            onerror="this.style.display='none';"
+        >
 
-            <img src="CSS/images/chef.png" alt="Chef" class="chef-image">
+        <h1>Create Account</h1>
 
-            <h2 class="register-title">Create an Account</h2>
+        <p class="subtitle">
+            Sign Up to Continue to Foodie
+        </p>
 
-            <form action="register.php" method="POST">
+        <form action="../register.php" method="POST">
 
-                <div class="input-group">
-                    <label for="full_name">Full Name</label>
-                    <input type="text" id="full_name" name="full_name"
-                           placeholder="Enter your full name" required>
-                </div>
+            <div class="input-group">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name"
+                       name="full_name"
+                       placeholder="Enter your full name"
+                       required>
+            </div>
 
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email"
-                           placeholder="Enter your email" required>
-                </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+            </div>
 
-                <div class="input-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone"
-                           placeholder="Enter your phone number" required>
-                </div>
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone"
+                       name="phone"
+                       placeholder="Enter your phone number"
+                       required>
+            </div>
 
-                <div class="input-group">
-                    <label for="password">Password</label>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password"
+                       name="password"
+                       placeholder="Create a password"
+                       required>
+            </div>
 
-                    <div class="password-box">
-                        <input type="password" id="password" name="password"
-                               placeholder="Enter your password" required>
+            <div class="input-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password"
+                       name="confirm_password"
+                       placeholder="Confirm your password"
+                       required>
+            </div>
 
-                        <span onclick="togglePassword('password', this)">👁</span>
-                    </div>
-                </div>
+            <button type="submit" class="register-btn">
+                Register
+            </button>
 
-                <div class="input-group">
-                    <label for="confirm_password">Confirm Password</label>
+        </form>
 
-                    <div class="password-box">
-                        <input type="password" id="confirm_password"
-                               name="confirm_password"
-                               placeholder="Confirm your password" required>
+        <p class="login-text">
+            Already have an account?
+            <a href="login.html">Sign In</a>
+        </p>
 
-                        <span onclick="togglePassword('confirm_password', this)">👁</span>
-                    </div>
-                </div>
-
-                <button type="submit" class="register-btn">
-                    Register
-                </button>
-
-            </form>
-
-            <p class="login-text">
-                Already have an account?
-                <a href="CSS/login.html">Login</a>
-            </p>
-
-        </div>
     </div>
-
-    <script>
-        function togglePassword(id, icon) {
-            const password = document.getElementById(id);
-
-            if (password.type === "password") {
-                password.type = "text";
-                icon.textContent = "🙈";
-            } else {
-                password.type = "password";
-                icon.textContent = "👁";
-            }
-        }
-    </script>
 
 </body>
 </html>
